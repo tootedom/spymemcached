@@ -44,7 +44,7 @@ public class ListenableFutureTest {
    * Use an unbounded thread pool for testing, which is very similar to
    * the one used in the {@link DefaultConnectionFactory}.
    */
-  private ExecutorService service = Executors.newCachedThreadPool();
+  private ExecutorService service = Executors.newFixedThreadPool(10);
 
   @Test
   public void verifyOnComplete() throws Exception {
